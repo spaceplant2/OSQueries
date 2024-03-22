@@ -1,12 +1,27 @@
-SELECT
-  name AS 'Program Name',
-  version AS Version,
-  install_date AS 'Install Date',
-  install_location AS 'Install Location',
-  install_source AS 'Install Source',
-  publisher AS Publisher,
-  uninstall_string AS 'Uninstall String',
-FROM programs
+SELECT * FROM
+(
+  SELECT
+    name AS 'Program Name',
+    version AS Version,
+    install_date AS 'Install Date',
+    install_location AS 'Install Location',
+    install_source AS 'Install Source',
+    '' AS 'Auto Launch',
+    publisher AS Publisher,
+    uninstall_string AS 'Uninstall String'
+  FROM programs
+  UNION ALL
+  SELECT
+    '' AS 'Program Name',
+    '' AS Version,
+    '' AS 'Install Date',
+    '' AS 'Install Location',
+    '' AS 'Install Source',
+    name AS 'Auto Launch',
+    '' AS Publisher,
+    '' AS 'Uninstall String'
+  FROM autoexec
+)
 WHERE
   name LIKE '%action1%'
   OR name LIKE '%Ammyy%'
