@@ -1,0 +1,6 @@
+##    Not quite what I was after. This gives a single result per endpoint, and Count(*) might be the
+#       only useful piece of information so far. 
+
+select count(*),path,inode,uid,gid,mode,size,atime,mtime,hard_links,symlink,type,attributes
+from file
+where path like "\Users\%\2222\%%";
