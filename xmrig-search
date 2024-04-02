@@ -1,5 +1,7 @@
-##    Not quite what I was after. This gives a single result per endpoint, and Count(*) might be the
-#       only useful piece of information so far. 
+/*    Not quite what I was after. This gives a single result per endpoint, and Count(*) might be the
+ *       only useful piece of information so far. Also, OSQuery is unable to find hidden files.
+ */
+
 
 select count(*),path,inode,uid,gid,mode,size,atime,mtime,hard_links,symlink,type,attributes
 from file

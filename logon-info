@@ -1,0 +1,10 @@
+/*    This set should pretty much give a big-picture view of user activities. 
+ *  each query against a table should be joined (or unioned) to the next
+ */
+
+select * from account_policy_data
+select * from groups
+select * from logged_in_users
+select * from known_hosts
+select user,logon_domain,logon_type,logon_time,logon_server from logon_sessions
+select * from userassist
