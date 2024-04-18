@@ -1,5 +1,5 @@
 /*    Not quite what I was after. This gives a single result per endpoint, and Count(*) might be the
- *       only useful piece of information so far. Also, OSQuery is unable to find hidden files.
+ *       only useful piece of information so far. Also problematic that OSQuery is unable to find hidden files.
  */
 
 
